@@ -12,6 +12,13 @@ class Node:
 ]'''
         return result
 
+    def __repr__(self):
+        result = f'''[
+    value: {self.value},
+    next: {self.next}
+]'''
+        return result
+
 class LinkedList:
 
     def __init__(self, value):
@@ -65,6 +72,27 @@ class LinkedList:
             before.next = after
         self.length -= 1
 
+    def set_value(self, index, value):
+        node = self.getNodeByIndex(index)
+        node.value = value
+
+    def reverse(self):
+        if self.length > 1:
+            temp = self.head
+            after = self.head.next
+            # print(f'{temp=}')
+            # print(f'{after=}')
+            temp.next = None
+            self.tail = temp
+            while after.next:
+                after_after = after.next
+                after.next = temp
+                temp = after
+                after = after_after
+            after.next = temp
+            self.head = after
+
+
     def getNodeByIndex(self,index):
 
         if index < 0 or index >= self.length:
@@ -97,7 +125,10 @@ linked_list = LinkedList(1)
 linked_list.append(10)
 linked_list.prepend(20)
 linked_list.insert(1, 30)
+linked_list.insert(2,50)
 linked_list.pop(0)
 
 
+print(linked_list)
+linked_list.reverse()
 print(linked_list)
