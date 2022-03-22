@@ -71,23 +71,23 @@ class DoublyLinkedList:
             index = self.length - 1
         self.checkIndexInRange(index)
         if index == self.length - 1:
-            old_tail = self.getNodeByIndex(index)
+            old_tail = self.tail
             if self.length == 1:
                 self.head = None
                 self.tail = None
             else:
-                new_tail = self.getNodeByIndex(index-1)
+                new_tail = old_tail.prev
                 self.tail = new_tail
                 new_tail.next = None
             self.length -= 1
             del old_tail
         elif index == 0:
-            old_head = self.getNodeByIndex(0)
+            old_head = self.head
             if self.length == 1:
                 self.head = None
                 self.tail = None
             else:
-                new_head = self.getNodeByIndex(1)
+                new_head = old_head.next
                 new_head.prev = None
                 self.head = new_head
             self.length -= 1
