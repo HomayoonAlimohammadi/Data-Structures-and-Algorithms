@@ -1,6 +1,3 @@
-from sklearn.feature_selection import SelectFdr
-
-
 class Node:
 
     def __init__(self, value):
