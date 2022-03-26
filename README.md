@@ -1,5 +1,5 @@
 # Data Structures and Algorithms
-In this project I learned about:
+## In this project I learned about:
 - Time and Space Complexity
 - Omega, Theta and Big O Notation
 - Linked Lists
@@ -15,3 +15,6 @@ In this project I learned about:
 - Merge Sort
 - Quick Sort
 - Tree and Graph Traversal
+
+## As a Plus, I've been practicing furthur about:
+- Decorators
