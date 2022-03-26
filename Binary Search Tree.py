@@ -6,10 +6,10 @@ class Node:
 
     
     def __str__(self):
-        return f'''Value: {self.value}
+        return f'''[Value: {self.value}
     \tLeft: {self.left}
-    \tRight: {self.right}
-        '''
+    \tRight: {self.right}]
+    '''
 
 
 class BinarySearchTree:
@@ -38,6 +38,19 @@ class BinarySearchTree:
         self.max_depth += 1
         return self
 
+    def contains(self, value):
+        lookup_node = self.root
+        while lookup_node is not None:
+            if lookup_node.value > value:
+                lookup_node = lookup_node.left
+            
+            elif lookup_node.value < value:
+                lookup_node = lookup_node.right
+            
+            else:
+                return True
+        return False
+
     def __str__(self):
         return str(self.root)
 
@@ -51,3 +64,11 @@ bst.insert(5)
 bst.insert(9.5)
 bst.insert(25)
 print(bst)
+print([
+    bst.contains(1),
+    bst.contains(20),
+    bst.contains(10),
+    bst.contains(25),
+    bst.contains(5),
+    bst.contains(9.5),
+])
