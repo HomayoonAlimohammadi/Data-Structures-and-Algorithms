@@ -199,7 +199,7 @@ class Graph:
         result = 'Graph: { \n'
         for vertex in self.__vertices:
             result += f'{vertex.value}: {vertex.getNeighboursName()} \n'
-        return result + f'}} \n Order: {self.__order}, Size: {self.__size}'
+        return result + f'}} \nOrder: {self.__order}, Size: {self.__size}'
 
 
 graph = Graph('A', 'B', 'C')
