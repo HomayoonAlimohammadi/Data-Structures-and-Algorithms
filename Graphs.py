@@ -20,6 +20,13 @@ class Vertex:
             vertex = Vertex(vertex)
         self.__neighbours.append(vertex)
 
+    def removeNeighbour(self, vertex):
+        if not isinstance(vertex, Vertex):
+            vertex = Vertex(vertex)
+
+        index = self.__neighbours.index(vertex)
+        del self.__neighbours[index]        
+
 
     def __str__(self):
         return f'Vertex: {self.value}, Neighbours: {self.__neighbours}'
@@ -103,7 +110,7 @@ class Graph:
         for vertex in self.__vertices:
             if vertex.value == value:
                 return vertex
-        raise LookupError(f'{value} not in Graph vertices.')
+        raise LookupError(f'"{value}" not in Graph vertices.')
 
     def addVertex(self, value):
 
@@ -130,7 +137,7 @@ class Graph:
                 index = vertex_neighbours.index(value)
                 del vertex_neighbours[index]
 
-        self.__size -= 1        
+        self.__order -= 1        
         return self
         
 
@@ -172,13 +179,27 @@ class Graph:
 
         
     def removeEdge(self, origin, destination):
-        raise NotImplementedError('Removing Edges is under development.')
+
+        origin_vertex = self.getVertexByValue(origin)
+        destination_vertex = self.getVertexByValue(destination)
+
+        if origin_vertex not in destination_vertex.getNeighbours():
+            raise LookupError(f'"{origin}" not in "{destination}" neighbours.')
+
+        if destination_vertex not  in origin_vertex.getNeighbours():
+            raise LookupError(f'"{destination}" not in "{origin}" neighbours.')
+
+        origin_vertex.removeNeighbour(destination_vertex)
+        destination_vertex.removeNeighbour(origin_vertex)
+
+        self.__size -= 1
+        
 
     def __str__(self):
         result = 'Graph: { \n'
         for vertex in self.__vertices:
             result += f'{vertex.value}: {vertex.getNeighboursName()} \n'
-        return result + '}'
+        return result + f'}} \n Order: {self.__order}, Size: {self.__size}'
 
 
 graph = Graph('A', 'B', 'C')
@@ -188,7 +209,8 @@ graph.removeVertex('A')
 graph.addVertex('A')
 graph.addEdge('A', 'B')
 # graph.addEdge('A', 'B')
-# graph.removeEdge('A', 'B')
+graph.addEdge('A', 'C')
+graph.removeEdge('B', 'A')
 
 
 print(graph)
