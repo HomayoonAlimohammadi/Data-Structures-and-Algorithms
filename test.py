@@ -1,5 +1,7 @@
-key = 'alskdflk'
-hashed_key = sum([ord(char) for char in str(key)])
-print(hashed_key)
+from typing import List
 
-print(hash('2394@#$#@lslskjhf30'))
+def f(a: int = 10) -> list:
+    print(a)
+
+print(f.__annotations__)
+f()
