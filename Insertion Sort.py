@@ -10,12 +10,12 @@ def InsertionSort(arr):
     return arr
 
 
-# arr = sample(range(1,100000), 10000)
-# shuffle(arr)
-# t0 = time()
-# generic_sort = sorted(arr)
-# print('generic sort:', time() - t0)
-# t0 = time()
-# insertion_sort = InsertionSort(arr)
-# print('selection sort:', time() - t0)
-# print(generic_sort == insertion_sort)
+arr = sample(range(1,100000), 10000)
+shuffle(arr)
+t0 = time()
+generic_sort = sorted(arr)
+print('generic sort:', time() - t0)
+t0 = time()
+insertion_sort = InsertionSort(arr)
+print('selection sort:', time() - t0)
+print(generic_sort == insertion_sort)
