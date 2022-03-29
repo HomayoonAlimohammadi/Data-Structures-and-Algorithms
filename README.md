@@ -33,5 +33,5 @@ I'm honored to say that all the code in this repository was written by me. witho
 <li>Decorators</li>
 <br/><br/>
 
-![Course](https://github.com/homayoonalimohammadi/Data-Structure-and-Algorithms/blob/main/Course.png?raw=true)
+![Course](https://github.com/homayoonalimohammadi/Data-Structures-and-Algorithms/blob/main/Course.png?raw=true)
 
