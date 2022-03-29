@@ -55,20 +55,24 @@ class BinarySearchTree:
         return str(self.root)
 
 
+def main():
+
+    bst = BinarySearchTree(10)
+    bst.insert(20)
+    bst.insert(9)
+    bst.insert(5)
+    bst.insert(9.5)
+    bst.insert(25)
+    print(bst)
+    print([
+        bst.contains(1),
+        bst.contains(20),
+        bst.contains(10),
+        bst.contains(25),
+        bst.contains(5),
+        bst.contains(9.5),
+    ])
 
 
-bst = BinarySearchTree(10)
-bst.insert(20)
-bst.insert(9)
-bst.insert(5)
-bst.insert(9.5)
-bst.insert(25)
-print(bst)
-print([
-    bst.contains(1),
-    bst.contains(20),
-    bst.contains(10),
-    bst.contains(25),
-    bst.contains(5),
-    bst.contains(9.5),
-])
+if __name__ == '__main__':
+    main()

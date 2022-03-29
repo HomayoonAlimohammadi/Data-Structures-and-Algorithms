@@ -13,12 +13,18 @@ def SelectionSort(arr):
 
     return arr
 
-arr = sample(range(1,100000), 10000)
-shuffle(arr)
-t0 = time()
-generic_sort = sorted(arr)
-print('generic sort:', time() - t0)
-t0 = time()
-selection_sort = SelectionSort(arr)
-print('selection sort:', time() - t0)
-print(generic_sort == selection_sort)
+
+def main():
+    arr = sample(range(1,100000), 10000)
+    shuffle(arr)
+    t0 = time()
+    generic_sort = sorted(arr)
+    print('generic sort:', time() - t0)
+    t0 = time()
+    selection_sort = SelectionSort(arr)
+    print('selection sort:', time() - t0)
+    print(generic_sort == selection_sort)
+
+
+if __name__ == '__main__':
+    main()

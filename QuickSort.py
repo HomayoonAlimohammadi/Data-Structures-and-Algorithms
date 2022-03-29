@@ -32,13 +32,19 @@ def SortByPivot(arr):
     return arr, swap_idx
 
 
-arr = sample(range(1,100000), 10000)
-shuffle(arr)
 
-t0 = time()
-generic_sort = sorted(arr)
-print('generic sort:', time() - t0)
-t0 = time()
-quick_sort = QuickSort(arr)
-print('quick sort:', time() - t0)
-print(generic_sort == quick_sort)
+def main():
+    arr = sample(range(1,100000), 10000)
+    shuffle(arr)
+
+    t0 = time()
+    generic_sort = sorted(arr)
+    print('generic sort:', time() - t0)
+    t0 = time()
+    quick_sort = QuickSort(arr)
+    print('quick sort:', time() - t0)
+    print(generic_sort == quick_sort)
+
+if __name__ == '__main__':
+    main()
+

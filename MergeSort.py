@@ -30,13 +30,18 @@ def MergeSort(arr):
 
 
 
-arr = sample(range(1,100000), 10000)
-shuffle(arr)
+def main():
+    arr = sample(range(1,100000), 10000)
+    shuffle(arr)
 
-t0 = time()
-generic_sort = sorted(arr)
-print('generic sort:', time() - t0)
-t0 = time()
-merge_sort = MergeSort(arr)
-print('merge sort:', time() - t0)
-print(generic_sort == merge_sort)
+    t0 = time()
+    generic_sort = sorted(arr)
+    print('generic sort:', time() - t0)
+    t0 = time()
+    merge_sort = MergeSort(arr)
+    print('merge sort:', time() - t0)
+    print(generic_sort == merge_sort)
+
+
+if __name__ == '__main__':
+    main()
