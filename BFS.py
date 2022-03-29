@@ -16,13 +16,16 @@ def BFS(tree):
     
     return results
 
-tree = BST.BinarySearchTree(47)
-tree.insert(21)
-tree.insert(76)
-tree.insert(18)
-tree.insert(27)
-tree.insert(52)
-tree.insert(82)
+def main():
+    tree = BST.BinarySearchTree(47)
+    tree.insert(21)
+    tree.insert(76)
+    tree.insert(18)
+    tree.insert(27)
+    tree.insert(52)
+    tree.insert(82)
 
-print(BFS(tree))
+    print(BFS(tree))
 
+if __name__ == '__main__':
+    main()

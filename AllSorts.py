@@ -27,10 +27,10 @@ def main():
     print('merge sort:', time() - t0)
     print(generic_sort == merge_sort)
 
-    # t0 = time()
-    # quick_sort = QuickSort.QuickSort(arr)
-    # print('quick sort:', time() - t0)
-    # print(generic_sort == quick_sort)
+    t0 = time()
+    quick_sort = QuickSort.QuickSort(arr)
+    print('quick sort:', time() - t0)
+    print(generic_sort == quick_sort)
 
     t0 = time()
     selection_sort = SelectionSort.SelectionSort(arr)
