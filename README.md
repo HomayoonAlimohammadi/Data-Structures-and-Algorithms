@@ -5,9 +5,9 @@
 </p>
 
 <p>
-This Course was meant to expand my knowledge and understanding about core concepts and algorithms.<br/>
+This Course was meant to expand my knowledge and understanding about core concepts, Data Structures and Algorithms.<br/>
 In this wonderful course I managed to learn a lot about Linked Lists, Queues and Stacks, Sorting algorithms, Graphs and their Traversals.<br/><br/>
-I started this course on March 21st 2022, and successfully completed it on March 29th.<br/>
+I started this course on <b>March 21st 2022</b>, and successfully completed it on <b>March 29th 2022</b>.<br/><br/>
 I'm honored to say that all the code in this repository was written by me. without even a glimpse on the course's codes.<br/>
 </p>
 
