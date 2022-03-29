@@ -34,6 +34,7 @@ I'm honored to say that all the code in this repository was written by me. witho
 <li>Annotations</li>
 <li>Modules and __name__</li>
 <li>NotImplementedError and other Exceptions</li>
+<li>Tries</li>
 <br/><br/>
 
 ![Course](https://github.com/homayoonalimohammadi/Data-Structures-and-Algorithms/blob/main/Course.png?raw=true)
