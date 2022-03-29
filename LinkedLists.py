@@ -121,14 +121,19 @@ class LinkedList:
         return result
 
 
-linked_list = LinkedList(1)
-linked_list.append(10)
-linked_list.prepend(20)
-linked_list.insert(1, 30)
-linked_list.insert(2,50)
-linked_list.pop(0)
+def main():
+    linked_list = LinkedList(1)
+    linked_list.append(10)
+    linked_list.prepend(20)
+    linked_list.insert(1, 30)
+    linked_list.insert(2,50)
+    linked_list.pop(0)
 
 
-print(linked_list)
-linked_list.reverse()
-print(linked_list)
+    print(linked_list)
+    linked_list.reverse()
+    print(linked_list)
+
+
+if __name__ == '__main__':
+    main()

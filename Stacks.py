@@ -62,15 +62,21 @@ class Stack:
         result += f'{temp.value}    |   Length: {self.length}'
         return result
 
-stack = Stack(10)
-print(stack)
-stack.push(20)
-print(stack)
-stack.push(100)
-print(stack)
-stack.pop()
-print(stack)
-print(stack.pop())
-print(stack)
-print(stack.pop())
-print(stack.pop())
+
+def main():
+    stack = Stack(10)
+    print(stack)
+    stack.push(20)
+    print(stack)
+    stack.push(100)
+    print(stack)
+    stack.pop()
+    print(stack)
+    print(stack.pop())
+    print(stack)
+    print(stack.pop())
+    print(stack.pop())
+
+
+if __name__ == '__main__':
+    main()

@@ -202,15 +202,19 @@ class Graph:
         return result + f'}} \nOrder: {self.__order}, Size: {self.__size}'
 
 
-graph = Graph('A', 'B', 'C')
-# graph.addVertex('A')
-graph.removeVertex('A')
-# graph.addVertex('A')
-graph.addVertex('A')
-graph.addEdge('A', 'B')
-# graph.addEdge('A', 'B')
-graph.addEdge('A', 'C')
-graph.removeEdge('B', 'A')
+def main():
+    graph = Graph('A', 'B', 'C')
+    # graph.addVertex('A')
+    graph.removeVertex('A')
+    # graph.addVertex('A')
+    graph.addVertex('A')
+    graph.addEdge('A', 'B')
+    # graph.addEdge('A', 'B')
+    graph.addEdge('A', 'C')
+    graph.removeEdge('B', 'A')
 
 
-print(graph)
+    print(graph)
+
+if __name__ == '__main__':
+    main()

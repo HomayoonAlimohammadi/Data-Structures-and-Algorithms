@@ -72,49 +72,53 @@ class HashTable:
         return result
 
 
-ht = HashTable()
-ht.set_item('name', 'homayoon')
-ht.set_item('age', 1)
-ht.set_item(2000, 1378)
-ht.set_item(2000, 2000)
-ht.set_item(2000, 1378)
-ht.set_item('age', 2000)
-ht.set_item('homayoon', 2000)
-ht.set_item('nooshin', 1999)
-ht.set_item('homayoon_love', 'nooshin')
-ht.set_item('nooshin_love', 'homayoon')
-print(ht)
+def main():
+    ht = HashTable()
+    ht.set_item('name', 'homayoon')
+    ht.set_item('age', 1)
+    ht.set_item(2000, 1378)
+    ht.set_item(2000, 2000)
+    ht.set_item(2000, 1378)
+    ht.set_item('age', 2000)
+    ht.set_item('homayoon', 2000)
+    ht.set_item('nooshin', 1999)
+    ht.set_item('homayoon_love', 'nooshin')
+    ht.set_item('nooshin_love', 'homayoon')
+    print(ht)
 
-### Interview Question:
+    ### Interview Question:
 
-list1 = sample(list(range(1_00000)), 10000)
-list2 = sample(list(range(1_00000)), 10000)
-shuffle(list1)
-shuffle(list2)
+    list1 = sample(list(range(1_00000)), 10000)
+    list2 = sample(list(range(1_00000)), 10000)
+    shuffle(list1)
+    shuffle(list2)
 
-### Check to see if list2 items exist in list1
+    ### Check to see if list2 items exist in list1
 
-### Bad Approach: O(n^2)
-t0 = time()
-for item2 in list2:
-    for item1 in list1:
-        if item1 == item2:
-            # print(item2, True)
-            break
-    else:
-        # print(item2, False)
-        pass
+    ### Bad Approach: O(n^2)
+    t0 = time()
+    for item2 in list2:
+        for item1 in list1:
+            if item1 == item2:
+                # print(item2, True)
+                break
+        else:
+            # print(item2, False)
+            pass
 
-print(time() - t0) # About 5.5 seconds!
-### Good Approach: O(n)
+    print(time() - t0) # About 5.5 seconds!
+    ### Good Approach: O(n)
 
-print()
+    print()
 
-t0 = time()
-my_dict = {key: True for key in list1}
-for item in list2:
-    result = my_dict.get(item, False)
-    # print(item, result)
+    t0 = time()
+    my_dict = {key: True for key in list1}
+    for item in list2:
+        result = my_dict.get(item, False)
+        # print(item, result)
 
-print(time() - t0) # About 0.002 seconds!
+    print(time() - t0) # About 0.002 seconds!
         
+
+if __name__ == '__main__':
+    main()

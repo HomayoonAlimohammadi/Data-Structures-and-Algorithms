@@ -55,13 +55,18 @@ class Queue:
         return result
 
 
-queue = Queue(10)
-print(queue)
-queue.enqueue(20)
-print(queue)
-for i in range(30, 100, 10):
-    queue.enqueue(i)
-print(queue)
-dequeue_node = queue.dequeue()
-print(dequeue_node)
-print(queue)
+def main():
+    queue = Queue(10)
+    print(queue)
+    queue.enqueue(20)
+    print(queue)
+    for i in range(30, 100, 10):
+        queue.enqueue(i)
+    print(queue)
+    dequeue_node = queue.dequeue()
+    print(dequeue_node)
+    print(queue)
+
+
+if __name__ == '__main__':
+    main()

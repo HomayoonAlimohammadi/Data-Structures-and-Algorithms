@@ -133,22 +133,26 @@ class DoublyLinkedList:
         return result
 
 
+def main():
+    l = DoublyLinkedList(10)
+    print(l)
+    l.append(1000)
+    print(l)
+    l.prepend(2)
+    print(l)
+    l.pop()
+    print(l)
+    l.insert(1, 100)
+    print(l)
+    l.pop()
+    l.pop()
+    print(l)
+    l.pop()
+    print(l)
 
-l = DoublyLinkedList(10)
-print(l)
-l.append(1000)
-print(l)
-l.prepend(2)
-print(l)
-l.pop()
-print(l)
-l.insert(1, 100)
-print(l)
-l.pop()
-l.pop()
-print(l)
-l.pop()
-print(l)
+
+if __name__ == '__main__':
+    main()
 
 
     
