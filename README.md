@@ -33,6 +33,7 @@ I'm honored to say that all the code in this repository was written by me. witho
 <li>Decorators</li>
 <li>Annotations</li>
 <li>Modules and __name__</li>
+<li>@property, getter, setter and deleter</li>
 <li>NotImplementedError and other Exceptions</li>
 <li>Tries</li>
 <br/><br/>
